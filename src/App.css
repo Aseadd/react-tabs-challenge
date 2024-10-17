@@ -47,6 +47,7 @@ body {
 .tab-card:hover {
   background-color: rgb(28, 43, 85);
 }
+
 ul {
   display: flex;
   justify-content: center;
@@ -81,9 +82,11 @@ li:active {
 }
 h1 {
   margin-bottom: 16px;
+  font-size: 16px;
 }
 p {
   text-align: justify;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 960px) {

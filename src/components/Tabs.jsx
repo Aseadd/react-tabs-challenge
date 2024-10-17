@@ -12,49 +12,26 @@ const Tabs = () => {
 
   useEffect(() => {
     dispatch(fetchTabs());
-  }, [activeTab, dispatch]);
+  }, [dispatch]);
 
   const tabs = [
-    {
-      id: 1,
-      tabTitle: "Tab 1",
-      title: "Title 1",
-      content: tabContents,
-    },
-    {
-      id: 2,
-      tabTitle: "Tab 2",
-      title: "Title 2",
-      content: tabContents,
-    },
-    {
-      id: 3,
-      tabTitle: "Tab 3",
-      title: "Title 3",
-      content: tabContents,
-    },
-    {
-      id: 4,
-      tabTitle: "Tab 4",
-      title: "Title 4",
-      content: tabContents,
-    },
+    { id: 1, tabTitle: "Tab 1", title: "Title 1", content: tabContents },
+    { id: 2, tabTitle: "Tab 2", title: "Title 2", content: tabContents },
+    { id: 3, tabTitle: "Tab 3", title: "Title 3", content: tabContents },
+    { id: 4, tabTitle: "Tab 4", title: "Title 4", content: tabContents },
   ];
 
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
+  const handleTabClick = (index) => setActiveTab(index);
 
   return (
     <div className="container">
       <ul>
         {tabs.map((tab, index) => (
           <li
-            key={index}
-            className={`  ${activeTab === index ? "active" : ""}`}
+            key={tab.id}
+            className={activeTab === index ? "active" : ""}
             onClick={() => handleTabClick(index)}
           >
-            
             {tab.title}
           </li>
         ))}
