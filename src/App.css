@@ -76,10 +76,6 @@ li:hover {
   color: white;
 }
 
-li:active {
-  color: white;
-  font-weight: bold;
-}
 h1 {
   margin-bottom: 16px;
   font-size: 16px;
@@ -87,6 +83,7 @@ h1 {
 p {
   text-align: justify;
   font-size: 12px;
+  line-height: 25px;
 }
 
 @media only screen and (max-width: 960px) {
